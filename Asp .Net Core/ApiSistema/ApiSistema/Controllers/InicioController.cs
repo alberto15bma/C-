@@ -11,7 +11,6 @@ namespace ApiSistema.Controllers
     [ApiController]
     public class InicioController : ControllerBase
     {
-
         [HttpGet]
         public IActionResult Get()
         {
@@ -21,7 +20,7 @@ namespace ApiSistema.Controllers
         [Route("verificar")]
         public IActionResult GetConexion()
         {
-            return Ok(new Respuesta() { Estado = true, Mensaje = "ok" });
+            return Ok(new Respuesta() { Estado = true, Mensaje = Mensajes.CONEXION_SERVIDOR });
         }
     }
 }
