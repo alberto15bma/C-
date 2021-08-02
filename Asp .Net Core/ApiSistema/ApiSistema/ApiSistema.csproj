@@ -14,9 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BDAplicacion\BDAplicacion.csproj" />
-    <ProjectReference Include="..\BDAuditoria\BDAuditoria.csproj" />
-    <ProjectReference Include="..\BDConfiguracion\BDConfiguracion.csproj" />
+    <Folder Include="Modelos\Auditoria\" />
+    <Folder Include="Modelos\Aplicacion\" />
   </ItemGroup>
 
 </Project>

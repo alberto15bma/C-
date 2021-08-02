@@ -4726,33 +4726,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
-      },
-      "BDAplicacion/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/BDAplicacion.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BDAplicacion.dll": {}
-        }
-      },
-      "BDAuditoria/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/BDAuditoria.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BDAuditoria.dll": {}
-        }
-      },
-      "BDConfiguracion/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/BDConfiguracion.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BDConfiguracion.dll": {}
-        }
       }
     }
   },
@@ -13014,28 +12987,10 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
-    },
-    "BDAplicacion/1.0.0": {
-      "type": "project",
-      "path": "../BDAplicacion/BDAplicacion.csproj",
-      "msbuildProject": "../BDAplicacion/BDAplicacion.csproj"
-    },
-    "BDAuditoria/1.0.0": {
-      "type": "project",
-      "path": "../BDAuditoria/BDAuditoria.csproj",
-      "msbuildProject": "../BDAuditoria/BDAuditoria.csproj"
-    },
-    "BDConfiguracion/1.0.0": {
-      "type": "project",
-      "path": "../BDConfiguracion/BDConfiguracion.csproj",
-      "msbuildProject": "../BDConfiguracion/BDConfiguracion.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "BDAplicacion >= 1.0.0",
-      "BDAuditoria >= 1.0.0",
-      "BDConfiguracion >= 1.0.0",
       "Dapper >= 2.0.90",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
@@ -13073,17 +13028,7 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {
-            "C:\\PROYECTOS GIT\\GITHUB\\apis\\Asp .Net Core\\ApiSistema\\BDAplicacion\\BDAplicacion.csproj": {
-              "projectPath": "C:\\PROYECTOS GIT\\GITHUB\\apis\\Asp .Net Core\\ApiSistema\\BDAplicacion\\BDAplicacion.csproj"
-            },
-            "C:\\PROYECTOS GIT\\GITHUB\\apis\\Asp .Net Core\\ApiSistema\\BDAuditoria\\BDAuditoria.csproj": {
-              "projectPath": "C:\\PROYECTOS GIT\\GITHUB\\apis\\Asp .Net Core\\ApiSistema\\BDAuditoria\\BDAuditoria.csproj"
-            },
-            "C:\\PROYECTOS GIT\\GITHUB\\apis\\Asp .Net Core\\ApiSistema\\BDConfiguracion\\BDConfiguracion.csproj": {
-              "projectPath": "C:\\PROYECTOS GIT\\GITHUB\\apis\\Asp .Net Core\\ApiSistema\\BDConfiguracion\\BDConfiguracion.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

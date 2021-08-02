@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
 using ApiSistema.Logica;
+using ApiSistema.Modelos.Configuracion.Tablas;
 using ApiSistema.Sistema;
-using BDConfiguracion.Modelos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace ApiSistema.Controllers
 {
@@ -29,20 +31,23 @@ namespace ApiSistema.Controllers
                     respuesta.Mensaje = Mensajes.USUARIO_SIN_PERMISO_LOGIN;
                     respuesta.Estado = false;
                     respuesta.Data = null;
-                    return Ok(user);
+                    return Ok(respuesta);
                 }
                 if (user.Bloqueado)
                 {
                     respuesta.Mensaje = Mensajes.USUARIO_BLOQUEADO;
                     respuesta.Estado = false;
                     respuesta.Data = null;
-                    return Ok(user);
+                    return Ok(respuesta);
                 }
+                dynamic data = new ExpandoObject();
+                data.usuario = user;
+                data.token = Token.GenerarToken(user.Usuario, user.Id);
 
                 respuesta.Mensaje = Mensajes.LOGIN_CORRECTO;
                 respuesta.Estado = true;
-                respuesta.Data = user;
-                return Ok(user);
+                respuesta.Data = data;
+                return Ok(respuesta);
             }
             else
             {

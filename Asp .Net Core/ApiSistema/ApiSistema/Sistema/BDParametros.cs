@@ -13,6 +13,6 @@ namespace ApiSistema.Sistema
         static public string ClaveCriptograficaPassword = "NJUUYFH67I";
         static public string BDUsuario = "sa";
         static public string BDPassword = "12345678";
-        static public string ApiKeyToken = "VEFEFJ8DF4JIL4Y";
+        static public string ApiKeyToken = "VEFEFJ8DF4JIL4YARIASALBERTO12345678";
     }
 }

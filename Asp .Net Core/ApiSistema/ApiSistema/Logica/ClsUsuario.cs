@@ -1,5 +1,5 @@
-﻿using ApiSistema.Sistema;
-using BDConfiguracion.Modelos;
+﻿using ApiSistema.Modelos.Configuracion.Tablas;
+using ApiSistema.Sistema;
 using Dapper;
 using System;
 using System.Collections.Generic;
@@ -24,9 +24,9 @@ namespace ApiSistema.Logica
 
                     var p = new DynamicParameters();
                     p.Add("UsuarioLogin", usuario.Usuario, dbType: DbType.String);
-                    p.Add("UsuarioPassword", Utilidades.Encriptar(usuario.Password), dbType: DbType.String);
+                    p.Add("PasswordLogin", Utilidades.Encriptar(usuario.Password), dbType: DbType.String);
 
-                    var sql = $"UsuarioAutenticar";
+                    var sql = $"SP_AutenticarUsuario";
                     user = db.Query<Usuarios>(sql, p, commandType: CommandType.StoredProcedure).FirstOrDefault();
                     
                     db.Close();
